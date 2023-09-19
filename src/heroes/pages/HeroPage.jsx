@@ -12,6 +12,8 @@ export const HeroPage = () => {
     navigate(-1);
   };
 
+  const heroImageUrl = `/heroes/${id}.jpg`; // usando github pages
+
   // return to marvel if hero not found
   if (!hero) return <Navigate to="/marvel" />;
 
@@ -20,7 +22,7 @@ export const HeroPage = () => {
       <div className="col-4">
         <img
           className="img-thumbnail animate__animated animate__fadeInLeft"
-          src={`/heroes/${hero.id}.jpg`}
+          src={heroImageUrl}
           alt={hero.superhero}
         />
       </div>
